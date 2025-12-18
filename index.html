@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GuessBuddy – Number Guessing Game</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="container">
+
+    <header>
+      <div class="brand">
+        <div class="logo">GB</div>
+        <div>
+          <h1>GuessBuddy</h1>
+          <p class="lead">A simple number guessing game</p>
+        </div>
+      </div>
+
+      <button id="themeToggle" class="theme-toggle">☀️ Light</button>
+    </header>
+
+    <div class="layout">
+      <section class="card">
+        <div class="status">
+          <div class="badge">Level: <span id="level">1</span></div>
+          <div class="badge">Attempts Left: <span id="attempts">6</span></div>
+        </div>
+
+        <div class="message" id="message">
+          I'm thinking of a number between 1 and 100.
+        </div>
+
+        <div class="controls">
+          <input type="number" id="guessInput" placeholder="Enter guess" />
+          <button id="guessBtn">Guess</button>
+          <button class="ghost" id="hintBtn">Hint</button>
+          <button class="ghost" id="restartBtn">Restart</button>
+        </div>
+
+        <div class="history" id="history"></div>
+      </section>
+
+      <!-- SIDEBAR -->
+      <aside class="card">
+        <strong>How it works</strong>
+        <p class="fun">
+          Guess the number chosen by the computer.
+          Each wrong guess reduces attempts.
+          Use hints carefully.
+        </p>
+      </aside>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
